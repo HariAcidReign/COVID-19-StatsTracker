@@ -8,12 +8,13 @@ class Scraper:
 
     def parse(self):
         soup = BeautifulSoup(self.markup, 'html.parser')
-        links = soup.findAll('a', limit=170)
+        links = soup.findAll('a', limit=200)
         self.saved_links = []
         for link in links:
             for keyword in self.keywords:
                 if keyword in link.text:
-                    self.saved_links.append(link)
+                    if link not in self.saved_links:
+                        self.saved_links.append(link)
         for link in self.saved_links:
             print(link.text)
 
