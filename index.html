@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <title>COVID19</title>
+  <link href="https://fonts.googleapis.com/css?family=Lilita+One|Ubuntu&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/b23a79e4da.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<style>
+  #title {
+    background-color: #4169E1;
+    color: #fff;
+  }
+
+  h1 {
+    font-family: "Lilita One";
+    font-size: 3.5rem;
+    line-height: 1.5;
+  }
+
+  .container-fluid {
+    padding: 3% 15%;
+  }
+
+  body {
+    font-family: "Lilita One";
+  }
+
+  /*navigation bar*/
+  .navbar {
+    padding: 0 0 4.5rem;
+  }
+
+  .navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .nav-item {
+    padding: 0 18px;
+  }
+
+  .nav-link {
+    font-family: "Lilitia One";
+    font-size: 1.2rem;
+    font-weight: lighter;
+  }
+
+  /*download button*/
+  .download-button {
+    margin: 5% 3% 5% 0%;
+  }
+
+  .title-image {
+    width: 60%;
+    transform: rotate(25deg);
+    position: relative;
+    left:30%;
+  }
+
+  h3{
+    font-family: :"Lilitia One";
+    font-weight: bold;
+  }
+
+  /*features*/
+  #features{
+    padding : 7% 15%;
+    background-color:#fff;
+    position: relative;
+
+  }
+
+  .feature-box{
+    text-align: center;
+    padding: 4.5%;
+  }
+
+  .icon{
+    color: #4682B4;
+    margin-bottom: 1rem;
+}
+.icon:hover{
+  color: #4169E1;
+}
+/*testimonial*/
+#testimonials{
+  padding : 7% 15%;
+  text-align: center;
+  background-color: #4682B4;
+  color: #fff;
+}
+.testimonial-image{
+  width:10%;
+  border-radius:100%;
+  margin:20px;
+}
+h2{
+
+  font-weight:bold;
+  font-size:3rem;
+  line-height: 1.5;
+}
+#press{
+  background-color:#4682B4;
+  text-align: center;
+  padding-bottom:3%;
+}
+.press-logo{
+  width:15%;
+  margin:20px 20px 50px;
+}
+.carousel-item{
+  padding:7% 15%;
+}
+#pricing{
+  padding:100px;
+  text-align: center;
+}
+.pricing-column{
+  padding: 3% 2%;
+}
+h3{
+  font-weight:bold;
+  font-size:3rem;
+  line-height:1.5;
+}
+#cta{
+  background-color: #4169E1;
+  text-align:center;
+  padding-bottom:3%;
+}
+#footer{
+  text-align:center;
+  padding: 3% 15%;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: orange;
+}
+</style>
+
+<body>
+  <section id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+	  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand" href="#">COVID19 Tracker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contribute</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">Donate</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+	  
+</section>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+					<div class="table">
+
+						<div class="row header">
+							<div class="cell">
+								State
+							</div>
+							<div class="cell">
+								Infected cases
+							</div>
+							<div class="cell">
+								Cured cases
+							</div>
+							<div class="cell">
+								Death toll
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Tamil Nadu
+							</div>
+							<div class="cell" data-title="Age">
+							
+							</div>
+							<div class="cell" data-title="Job Title">
+							
+							</div>
+							<div class="cell" data-title="Location">
+						
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Maharashtra
+							</div>
+							<div class="cell" data-title="Age">
+								
+							</div>
+							<div class="cell" data-title="Job Title">
+								
+							</div>
+							<div class="cell" data-title="Location">
+								
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Delhi
+							</div>
+							<div class="cell" data-title="Age">
+								
+							</div>
+							<div class="cell" data-title="Job Title">
+								
+							</div>
+							<div class="cell" data-title="Location">
+								
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								West Bengal
+							</div>
+							<div class="cell" data-title="Age">
+								
+							</div>
+							<div class="cell" data-title="Job Title">
+								
+							</div>
+							<div class="cell" data-title="Location">
+								
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Kerela
+							</div>
+							<div class="cell" data-title="Age">
+								
+							</div>
+							<div class="cell" data-title="Job Title">
+								
+							</div>
+							<div class="cell" data-title="Location">
+								
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Madhya Pradesh
+							</div>
+							<div class="cell" data-title="Age">
+								
+							</div>
+							<div class="cell" data-title="Job Title">
+								
+							</div>
+							<div class="cell" data-title="Location">
+								
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Andhra Pradesh
+							</div>
+							<div class="cell" data-title="Age">
+								
+							</div>
+							<div class="cell" data-title="Job Title">
+								
+							</div>
+							<div class="cell" data-title="Location">
+								
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Karnataka
+							</div>
+							<div class="cell" data-title="Age">
+								
+							</div>
+							<div class="cell" data-title="Job Title">
+								
+							</div>
+							<div class="cell" data-title="Location">
+								
+							</div>
+						</div>
+
+					</div>
+			</div>
+		</div>
+	</div>
+
+
+	<section id="title">
+  <div class="container-fluid">
+  <section id="cta">
+
+    <h3>Stay home, stay safe!</h3>
+    <a href="https://www.covid19india.org/"><button type="button" class="btn btn-dark btn-lg download-button"><i class="fas fa-user-shield"></i> Official site</button></a>
+            <a href="https://www.who.int/"><button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fas fa-heartbeat"></i> WHO site</button></a>
+
+  </section>
+</div>
+</section>
+
+  <footer id="footer">
+
+    <p>© Copyright 2020 COVID19 Tracker</p>
+
+  </footer>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
