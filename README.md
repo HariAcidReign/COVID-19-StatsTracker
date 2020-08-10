@@ -1,4 +1,5 @@
 # COVID-19-StatsTracker
+<strong> Try it out <a href="https://covid-tracker101.herokuapp.com/index.html">here</a> </strong>
 <p>A web app created to track the statistics of the Coronavirus, and curate top news from various sources into a simple, focused format<p>
 <img src="https://www.coronatracker.com/_nuxt/img/262cfac.png" width="72" height="72">
 
